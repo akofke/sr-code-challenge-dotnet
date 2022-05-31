@@ -33,9 +33,11 @@ namespace code_challenge
             });
             services.AddScoped<IEmployeeRepository,EmployeeRespository>();
             services.AddScoped<IReportingStructureRepository, ReportingStructureRepository>();
+            services.AddScoped<ICompensationRepository, CompensationRepository>();
             services.AddTransient<EmployeeDataSeeder>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IReportingStructureService, ReportingStructureService>();
+            services.AddScoped<ICompensationService, CompensationService>();
             services.AddMvc();
         }
 
